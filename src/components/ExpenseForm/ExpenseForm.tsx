@@ -109,7 +109,7 @@ export function ExpenseForm({ onSuccess }: ExpenseFormProps) {
           id="description"
           rows={3}
           {...register('description')}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm border p-2"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-green-500 focus:ring-green-500 sm:text-sm border p-2"
           placeholder="ค่าใช้จ่ายนี้สำหรับอะไร?"
         />
         {errors.description && (
@@ -126,7 +126,7 @@ export function ExpenseForm({ onSuccess }: ExpenseFormProps) {
           id="amount"
           step="0.01"
           {...register('amount')}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm border p-2"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-green-500 focus:ring-green-500 sm:text-sm border p-2"
           placeholder="0.00"
         />
         {errors.amount && (
@@ -142,7 +142,7 @@ export function ExpenseForm({ onSuccess }: ExpenseFormProps) {
           type="date"
           id="date"
           {...register('date')}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm border p-2"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-green-500 focus:ring-green-500 sm:text-sm border p-2"
         />
         {errors.date && (
           <p className="mt-1 text-sm text-red-600">{errors.date.message}</p>
@@ -175,7 +175,7 @@ export function ExpenseForm({ onSuccess }: ExpenseFormProps) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-xs text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'กำลังส่ง...' : 'ส่งค่าใช้จ่าย'}
       </button>

@@ -186,7 +186,7 @@ function SummaryDetailContent() {
         </div>
 
         {/* Summary Header Card */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+        <div className="bg-white rounded-lg shadow-xs p-6 mb-6">
           <div className="flex items-start justify-between">
             <div className="flex items-center">
               {summary.userPictureUrl ? (
@@ -238,7 +238,7 @@ function SummaryDetailContent() {
         </div>
 
         {/* Expenses List */}
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+        <div className="bg-white rounded-lg shadow-xs overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
             <h2 className="text-lg font-semibold text-gray-900">รายการค่าใช้จ่าย</h2>
           </div>

@@ -170,11 +170,11 @@ function UserManagementContent() {
                 รอการอนุมัติ ({pendingUsers.length})
               </h2>
               {pendingUsers.length === 0 ? (
-                <div className="bg-white rounded-lg shadow-sm p-6 text-center text-gray-500">
+                <div className="bg-white rounded-lg shadow-xs p-6 text-center text-gray-500">
                   ไม่มีผู้ใช้รอการอนุมัติ
                 </div>
               ) : (
-                <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="bg-white rounded-lg shadow-xs overflow-hidden">
                   <ul className="divide-y divide-gray-200">
                     {pendingUsers.map((user) => (
                       <UserListItem
@@ -198,11 +198,11 @@ function UserManagementContent() {
                 อนุมัติแล้ว ({approvedUsers.length})
               </h2>
               {approvedUsers.length === 0 ? (
-                <div className="bg-white rounded-lg shadow-sm p-6 text-center text-gray-500">
+                <div className="bg-white rounded-lg shadow-xs p-6 text-center text-gray-500">
                   ยังไม่มีผู้ใช้ที่อนุมัติแล้ว
                 </div>
               ) : (
-                <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="bg-white rounded-lg shadow-xs overflow-hidden">
                   <ul className="divide-y divide-gray-200">
                     {approvedUsers.map((user) => (
                       <UserListItem
@@ -255,10 +255,10 @@ function UserListItem({
             <img
               src={user.pictureUrl}
               alt={user.displayName || 'User'}
-              className="w-10 h-10 rounded-full flex-shrink-0"
+              className="w-10 h-10 rounded-full shrink-0"
             />
           ) : (
-            <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
               <span className="text-gray-500 text-sm">
                 {user.displayName?.charAt(0) || '?'}
               </span>
@@ -270,12 +270,12 @@ function UserListItem({
                 {user.displayName || 'Unknown'}
               </p>
               {user.role === Role.MANAGER && (
-                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-medium bg-purple-100 text-purple-800">
                   ผู้จัดการ
                 </span>
               )}
               {isCurrentUser && (
-                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-medium bg-blue-100 text-blue-800">
                   คุณ
                 </span>
               )}
@@ -286,7 +286,7 @@ function UserListItem({
           </div>
         </div>
 
-        <div className="ml-4 flex-shrink-0">
+        <div className="ml-4 shrink-0">
           {user.isApproved ? (
             <button
               onClick={onDisable}

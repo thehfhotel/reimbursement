@@ -32,7 +32,7 @@ export default function LoginPage() {
           <button
             onClick={handleLineLogin}
             disabled={isLoading}
-            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#00B900] hover:bg-[#00a000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00B900] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#00B900] hover:bg-[#00a000] focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-[#00B900] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {isLoading ? (
               <span className="flex items-center gap-2">

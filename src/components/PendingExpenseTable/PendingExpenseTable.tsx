@@ -88,7 +88,7 @@ export function PendingExpenseTable({
               if (el) el.indeterminate = someSelected
             }}
             onChange={toggleAll}
-            className="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
+            className="h-4 w-4 rounded-sm border-gray-300 text-green-600 focus:ring-green-500"
           />
           เลือกทั้งหมด ({expenses.length})
         </label>
@@ -115,7 +115,7 @@ export function PendingExpenseTable({
               type="checkbox"
               checked={selected.has(expense.id)}
               onChange={() => toggleOne(expense.id)}
-              className="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500 flex-shrink-0"
+              className="h-4 w-4 rounded-sm border-gray-300 text-green-600 focus:ring-green-500 shrink-0"
             />
 
             {/* User avatar */}
@@ -123,14 +123,14 @@ export function PendingExpenseTable({
               <img
                 src={expense.user.pictureUrl}
                 alt=""
-                className="w-6 h-6 rounded-full flex-shrink-0"
+                className="w-6 h-6 rounded-full shrink-0"
               />
             ) : (
-              <div className="w-6 h-6 rounded-full bg-gray-300 flex-shrink-0" />
+              <div className="w-6 h-6 rounded-full bg-gray-300 shrink-0" />
             )}
 
             {/* User name */}
-            <span className="text-sm text-gray-600 w-16 truncate flex-shrink-0">
+            <span className="text-sm text-gray-600 w-16 truncate shrink-0">
               {expense.user?.displayName || 'Unknown'}
             </span>
 
@@ -143,19 +143,19 @@ export function PendingExpenseTable({
             </Link>
 
             {/* Amount */}
-            <span className="text-sm font-medium text-gray-900 flex-shrink-0">
+            <span className="text-sm font-medium text-gray-900 shrink-0">
               ฿{formatAmount(expense.amount)}
             </span>
 
             {/* Date */}
-            <span className="text-xs text-gray-400 w-14 text-right flex-shrink-0">
+            <span className="text-xs text-gray-400 w-14 text-right shrink-0">
               {formatDate(expense.date)}
             </span>
 
             {/* Arrow link */}
             <Link
               href={`/expenses/${expense.id}`}
-              className="text-gray-400 hover:text-green-600 flex-shrink-0"
+              className="text-gray-400 hover:text-green-600 shrink-0"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
