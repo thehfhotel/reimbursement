@@ -36,6 +36,7 @@ test.describe('Login Page', () => {
 
   test('should display error message when OAuth fails', async ({ page }) => {
     // Simulate OAuth error callback
+    // eslint-disable-next-line no-secrets/no-secrets
     await page.goto('/login?error=OAuthCallback')
 
     // Should show error state or message
