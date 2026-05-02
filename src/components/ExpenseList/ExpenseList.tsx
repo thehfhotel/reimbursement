@@ -34,16 +34,16 @@ export function ExpenseList({
         {[1, 2, 3].map((i) => (
           <div
             key={i}
-            className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 animate-pulse"
+            className="bg-white rounded-lg shadow-xs border border-gray-200 p-4 animate-pulse"
           >
             <div className="flex justify-between items-start mb-2">
               <div className="flex-1">
-                <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-                <div className="h-3 bg-gray-200 rounded w-1/4" />
+                <div className="h-4 bg-gray-200 rounded-sm w-3/4 mb-2" />
+                <div className="h-3 bg-gray-200 rounded-sm w-1/4" />
               </div>
-              <div className="h-5 bg-gray-200 rounded w-16" />
+              <div className="h-5 bg-gray-200 rounded-sm w-16" />
             </div>
-            <div className="h-6 bg-gray-200 rounded w-1/3 mt-2" />
+            <div className="h-6 bg-gray-200 rounded-sm w-1/3 mt-2" />
           </div>
         ))}
       </div>
@@ -120,7 +120,7 @@ export function ExpenseList({
               </p>
             </div>
             <div>
-              <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm">
+              <nav className="isolate inline-flex -space-x-px rounded-md shadow-xs">
                 <button
                   onClick={() => onPageChange?.(pagination.page - 1)}
                   disabled={pagination.page <= 1}

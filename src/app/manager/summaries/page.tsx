@@ -194,7 +194,7 @@ function SummariesContent() {
           <button
             onClick={handleGenerateSummary}
             disabled={isGenerating || !csrfToken}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-xs text-white bg-green-600 hover:bg-green-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {isGenerating ? (
               <>
@@ -246,7 +246,7 @@ function SummariesContent() {
           </div>
         ) : summaries.length === 0 ? (
           /* Empty state */
-          <div className="bg-white rounded-lg shadow-sm p-8 text-center">
+          <div className="bg-white rounded-lg shadow-xs p-8 text-center">
             <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
@@ -258,7 +258,7 @@ function SummariesContent() {
               <button
                 onClick={handleGenerateSummary}
                 disabled={isGenerating || !csrfToken}
-                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center px-4 py-2 border border-transparent shadow-xs text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <svg className="-ml-1 mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -270,7 +270,7 @@ function SummariesContent() {
         ) : (
           <>
             {/* Desktop Table */}
-            <div className="hidden sm:block bg-white shadow-sm rounded-lg overflow-hidden">
+            <div className="hidden sm:block bg-white shadow-xs rounded-lg overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
@@ -356,7 +356,7 @@ function SummariesContent() {
             {/* Mobile Cards */}
             <div className="sm:hidden space-y-4">
               {summaries.map((summary) => (
-                <div key={summary.id} className="bg-white shadow-sm rounded-lg p-4">
+                <div key={summary.id} className="bg-white shadow-xs rounded-lg p-4">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center">
                       {summary.userPictureUrl ? (

@@ -48,7 +48,7 @@ export function ExpenseCard({ expense, showUser = false, onClick }: ExpenseCardP
   }).format(expense.amount)
 
   const CardContent = (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-lg shadow-xs border border-gray-200 p-4 hover:shadow-md transition-shadow">
       <div className="flex justify-between items-start mb-2">
         <div className="flex-1 min-w-0">
           <h3 className="text-sm font-medium text-gray-900 truncate">
@@ -56,7 +56,7 @@ export function ExpenseCard({ expense, showUser = false, onClick }: ExpenseCardP
           </h3>
           <p className="text-xs text-gray-500 mt-0.5">{formattedDate}</p>
         </div>
-        <StatusBadge status={expense.status} className="ml-2 flex-shrink-0" />
+        <StatusBadge status={expense.status} className="ml-2 shrink-0" />
       </div>
 
       <div className="flex justify-between items-center">
