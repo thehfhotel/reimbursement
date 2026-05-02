@@ -325,7 +325,7 @@ jobs:
             type=ref,event=tag
 
       - name: Build and push Docker image (runner)
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           target: runner
@@ -336,7 +336,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push Docker image (migrator)
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           target: migrator
