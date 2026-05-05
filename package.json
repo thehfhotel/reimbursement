@@ -31,7 +31,7 @@
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.69.0",
     "sharp": "^0.34.5",
-    "zod": "^4.3.4"
+    "zod": "^4.4.3"
   },
   "overrides": {
     "glob": "^11.0.0",
