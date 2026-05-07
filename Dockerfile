@@ -1,12 +1,12 @@
 # Stage 1: Dependencies
-FROM node:25-alpine AS deps
+FROM node:26-alpine AS deps
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
 RUN npm ci
 
 # Stage 2: Builder
-FROM node:25-alpine AS builder
+FROM node:26-alpine AS builder
 WORKDIR /app
 
 # Dummy DATABASE_URL for Prisma generate (not used at runtime)
@@ -22,7 +22,7 @@ RUN npx prisma generate
 RUN npm run build
 
 # Stage 3: Migrator (for running database migrations)
-FROM node:25-alpine AS migrator
+FROM node:26-alpine AS migrator
 WORKDIR /app
 
 COPY --from=builder /app/node_modules ./node_modules
@@ -32,7 +32,7 @@ COPY --from=builder /app/prisma.config.ts ./prisma.config.ts
 CMD ["npx", "prisma", "migrate", "deploy"]
 
 # Stage 4: Runner
-FROM node:25-alpine AS runner
+FROM node:26-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
