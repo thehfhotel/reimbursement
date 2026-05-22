@@ -21,17 +21,17 @@
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
-    "@hookform/resolvers": "^5.2.2",
+    "@hookform/resolvers": "^5.4.0",
     "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.2.0",
-    "next": "^16.2.4",
+    "next": "^16.2.6",
     "next-auth": "^4.24.13",
-    "pg": "^8.16.3",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-hook-form": "^7.69.0",
+    "pg": "^8.21.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-hook-form": "^7.76.0",
     "sharp": "^0.34.5",
-    "zod": "^4.3.4"
+    "zod": "^4.4.3"
   },
   "overrides": {
     "glob": "^11.0.0",
@@ -41,7 +41,7 @@
     "uuid": "^14.0.0",
     "@hono/node-server": "^1.19.13",
     "postcss": "^8.5.10",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "^25.0.3",
     "@types/pg": "^8.16.0",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/coverage-v8": "^4.0.16",
